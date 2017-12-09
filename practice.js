@@ -29,6 +29,12 @@ var Counter = React.createClass({
         });
         console.log('/3')
     },
+    resetCounter: function() {
+    	this.setState ({
+    		counter: this.state.counter = 0
+    	});
+    	console.log('reset')
+    },
 
     render: function() {
         return React.createElement('div', {},
@@ -36,7 +42,8 @@ var Counter = React.createClass({
             React.createElement('button', {onClick: this.increment}, '+'),
             React.createElement('button', {onClick: this.decrement}, '-'),
             React.createElement('button', {onClick: this.multi}, 'x3'),
-            React.createElement('button', {onClick: this.div}, '/3')
+            React.createElement('button', {onClick: this.div}, '/3'),
+            React.createElement('button', {onClick: this.resetCounter}, 'reset')
         );
     }  
 });
@@ -63,11 +70,19 @@ var Count = React.createClass({
         console.log('/10')
     },
 
+    resetCount: function() {
+    	this.setState ({
+    		count: this.state.counter = 0
+    	});
+    	console.log('reset')
+    },
+
     render: function() {
         return React.createElement('div', {},
             React.createElement('input', {type: 'text', value: this.state.count}),
             React.createElement('button', {onClick: this.multiTen}, '*10'),
-            React.createElement('button', {onClick: this.divTen}, '/10')
+            React.createElement('button', {onClick: this.divTen}, '/10'),
+            React.createElement('button', {onClick: this.resetCount}, 'reset')
         );
     }
 });
