@@ -48,7 +48,7 @@ var Counter = React.createClass({
 
     render: function() {
         return React.createElement('div', {},
-            React.createElement('input', {type: 'text', value: this.state.counter}),
+            React.createElement('input', {type: 'text', defaultValue: this.state.counter}),
             React.createElement('button', {onClick: this.increment}, '+'),
             React.createElement('button', {onClick: this.decrement}, '-'),
             React.createElement('button', {onClick: this.multi}, 'x3'),
@@ -95,7 +95,7 @@ var Count = React.createClass({
 
     render: function() {
         return React.createElement('div', {},
-            React.createElement('input', {type: 'text', value: this.state.count}),
+            React.createElement('input', {type: 'text', defaultValue: this.state.count}),
             React.createElement('button', {onClick: this.multiTen}, '*10'),
             React.createElement('button', {onClick: this.divTen}, '/10'),
             React.createElement('button', {onClick: this.resetCount}, 'reset')
