@@ -40,7 +40,7 @@ var Counter = React.createClass({
     resetCounter: function() {
     	this.setState(function(prevState) {
            return {
-              counter: prevState.counter = 0
+              counter: 0
            };
         });
     	console.log('reset')
@@ -87,7 +87,7 @@ var Count = React.createClass({
     resetCount: function() {
     	this.setState(function(prevState) {
            return {
-              count: prevState.count = 0
+              count: 0
            };
         });
     	console.log('reset')
